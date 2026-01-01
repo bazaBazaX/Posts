@@ -8,10 +8,10 @@
 </head>
 <body>
     <?php include $_SERVER["DOCUMENT_ROOT"]."/include/header.php"; ?>
-
     <main>
         <section>
-            <form id="loginForm" method="POST" novalidate>
+            <form id="registerForm" method="POST" novalidate>
+                <input type="email" placeholder="Enter your email" id="emailInput">
                 <input type="text" placeholder="Enter your login" id="nameInput">
                 <input type="password" placeholder="Enter your password" id="passwordInput">
 
@@ -21,6 +21,5 @@
             <a href="/pages/register/index.php">No account?</a>
         </section>
     </main>
-    <script src="/pages/login/logic/js/login.js"></script>
 </body>
 </html>

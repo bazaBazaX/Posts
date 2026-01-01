@@ -18,7 +18,7 @@ document.getElementById("loginForm").addEventListener("submit", function(exact) 
     .then(res => res.json())
     .then(data => {
         if(data.success) {
-            window.location.href = "/pages/posts/index.php";
+            window.location.href = "../../../pages/posts/index.php";
         } else {
             errorMessage.textContent = "Wrong password or login.";
         }

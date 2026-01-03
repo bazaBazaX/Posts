@@ -6,19 +6,24 @@ document.getElementById("registerForm").addEventListener("submit", function(even
     const password = document.getElementById("passwordInput").value.trim();
     const errorMessage = document.getElementById("errorMessage");
 
-    if(password < 8) {
-        showError("password must be more than 8 symbols long.");
+    if(password.length < 8) {
+        errorMessage.textContent = "password must be more than 8 symbols long.";
         return;
     }
     
     fetch("/pages/register/logic/php/register.php", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, login, password})
+        body: JSON.stringify({ login, email, password})
     })
     .then(res => res.json())
     .then(data => {
-        // if(data_success) {......}
+        if(data.success) {
+            window.location.href = "../../../../../index.php";
+        } else {
+            errorMessage.textContent = data.message; 
+            return;
+        }
     })
 });
 

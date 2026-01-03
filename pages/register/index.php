@@ -1,3 +1,4 @@
+<?php include $_SERVER["DOCUMENT_ROOT"]."/include/header.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +8,6 @@
     <link rel="stylesheet" href="/include/styles/header.css">
 </head>
 <body>
-    <?php include $_SERVER["DOCUMENT_ROOT"]."/include/header.php"; ?>
     <main>
         <section>
             <form id="registerForm" method="POST" novalidate>
@@ -17,9 +17,10 @@
 
                 <button type="submit">Submit</button>
             </form>
-            <p id="errorMessage"></p>
+            <p id="errorMessage">s</p>
             <a href="/pages/register/index.php">No account?</a>
         </section>
     </main>
+    <script src="/pages/register/logic/js/register.js"></script>
 </body>
 </html>

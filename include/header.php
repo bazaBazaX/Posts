@@ -1,3 +1,11 @@
+<?php 
+
+if(session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +21,7 @@
         <?php
             if(isset($_SESSION["user-id"])) {
                 echo '<a href="">Create posts</a>';
-                echo '<a href="">Log out</a>';
+                echo '<a href="../../logic/logout.php">Log out</a>';
             } else {
                 echo '<a href="/pages/login/index.php">Login</a>';
             }

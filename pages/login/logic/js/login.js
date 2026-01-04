@@ -4,6 +4,7 @@ document.getElementById("loginForm").addEventListener("submit", function(exact) 
     const login = document.getElementById("nameInput").value.trim();
     const password = document.getElementById("passwordInput").value.trim();
     const errorMessage = document.getElementById("errorMessage");
+    const ifSaving = document.getElementById("rememberAll").checked;
 
     if(password.length < 8 || login.length < 8 || password === "" || login === "") {
         errorMessage.textContent = "Wrong password or login.";
@@ -13,7 +14,7 @@ document.getElementById("loginForm").addEventListener("submit", function(exact) 
     fetch("/pages/login/logic/php/login.php", {
         method: "POST",
         headers: { "Content-Type" : "application/json"},
-        body: JSON.stringify({ login, password})
+        body: JSON.stringify({ login, password, ifSaving})
     })
     .then(res => res.json())
     .then(data => {

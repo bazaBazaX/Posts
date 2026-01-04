@@ -9,6 +9,7 @@
 
         $login = trim($data["login"]);
         $password = trim($data["password"]);
+        $ifSaving = $data["ifSaving"];
 
         if(strlen($password) < 8 || strlen($login) < 8 || $password === "" || $login === "") {
             echo json_encode(["success" => false, "message" => 'Password entry rules are broken.']);
@@ -28,8 +29,10 @@
         }
 
         if(password_verify($password, $user["password"])) {
-            session_regenerate_id(true);
-            $_SESSION["user-id"] = $user["id"];
+            if($ifSaving == true) {
+                session_regenerate_id(true);
+                $_SESSION["user-id"] = $user["id"];
+            }
             echo json_encode(["success" => true, "message" => "Logined successful!"]);
             exit;
         } else {

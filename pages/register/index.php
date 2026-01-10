@@ -1,4 +1,7 @@
-<?php include $_SERVER["DOCUMENT_ROOT"]."/include/header.php"; ?>
+<?php 
+session_start();
+include $_SERVER["DOCUMENT_ROOT"]."/include/header.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

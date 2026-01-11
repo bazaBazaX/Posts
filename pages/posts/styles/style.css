@@ -1,0 +1,85 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 60vw 1fr;
+    overflow: hidden;
+}
+
+.posts {
+    min-height: 0;
+    display: grid;
+    grid-auto-flow: row;
+    grid-auto-rows: auto, minmax(200px, auto);
+    overflow-y: auto;
+    gap: 20px;
+}
+
+.posts h2 {
+    display: flex;
+    justify-self: center;
+    position: sticky;
+    padding: 8px 16px;
+    top: 0;
+    background: white;
+    box-sizing: border-box;
+    width: 100%;
+    justify-content: center;
+    height: 50px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    background-color: aliceblue;
+    width: 80%;
+    justify-self: center;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+aside h2 {
+    align-self: center;
+}
+
+form {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    height: 40%;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+}
+
+form input, form button {
+    width: 70%;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid gray;
+    height: 30px;
+}
+
+form button {
+    margin-top: 10px;
+    width: 60%;
+}
+
+.wrong {
+    border-color: red;
+}

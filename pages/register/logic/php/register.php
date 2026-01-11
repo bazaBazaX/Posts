@@ -1,6 +1,6 @@
 <?php
     session_start();
-    require_once $_SERVER["DOCUMENT_ROOT"] . "/config/database.php";
+    require_once "../../../../config/database.php";
 
     if($_SERVER["REQUEST_METHOD"] !== "POST") {
         http_response_code(405);

@@ -25,40 +25,14 @@ session_start();
                     <h4>23:12</h4>
                 </div>
             </section>
+            <!-- i need this section below to get into forEach func just for each message in db. load only 10 of them, then if we see the last one, load another 10. -->
             <section>
-                <h3>Admin</h3>
-                <h1>Really needed info</h1>
-                <p>Baza is da best programmer in the entire globe.</p>
+                <h3></h3>
+                <h1></h1>
+                <p></p>
                 <div class="time">
-                    <h3>04.01.2026</h3>
-                    <h4>23:12</h4>
-                </div>
-            </section>
-            <section>
-                <h3>Admin</h3>
-                <h1>Really needed info</h1>
-                <p>Baza is da best programmer in the entire globe.</p>
-                <div class="time">
-                    <h3>04.01.2026</h3>
-                    <h4>23:12</h4>
-                </div>
-            </section>
-            <section>
-                <h3>Admin</h3>
-                <h1>Really needed info</h1>
-                <p>Baza is da best programmer in the entire globe.</p>
-                <div class="time">
-                    <h3>04.01.2026</h3>
-                    <h4>23:12</h4>
-                </div>
-            </section>
-            <section>
-                <h3>Admin</h3>
-                <h1>Really needed info</h1>
-                <p>Baza is da best programmer in the entire globe.</p>
-                <div class="time">
-                    <h3>04.01.2026</h3>
-                    <h4>23:12</h4>
+                    <h3></h3>
+                    <h4></h4>
                 </div>
             </section>
         </div>
